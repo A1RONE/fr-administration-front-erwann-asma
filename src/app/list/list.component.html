@@ -1,0 +1,8 @@
+<app-nav></app-nav>
+<ul>
+@for (item of userlist; track item.id) {
+    <app-user-card [myData] = item.id></app-user-card>
+    } @empty {
+    <li>There are no items.</li>
+}
+</ul>

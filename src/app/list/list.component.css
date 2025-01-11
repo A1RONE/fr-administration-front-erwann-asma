@@ -1,0 +1,10 @@
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+app-user-card{
+    padding: 10px;
+}

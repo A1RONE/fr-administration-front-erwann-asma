@@ -1,0 +1,43 @@
+<app-nav></app-nav>
+
+<div class="association-card">
+    <div class="association-header">
+      <h2>{{ association.name }}</h2>
+    </div>
+</div>
+<div class="association-card">
+    <div class="association-members">
+      <h3>Members</h3>
+      <ul>
+        @for (item of association.members; track item) {
+            <li>
+                <span class="member-name">{{ item.firstname }} {{ item.lastname }}</span>
+                <span class="member-role">{{ item.role }}</span>
+            </li>
+        } @empty {
+            <li>No members found.</li>
+        }
+      </ul>
+    </div>
+</div>
+
+<div class="association-card">
+    <div class="association-members">
+      <h3>Minutes</h3>
+      <ul>
+        @for (item of minutes; track item) {
+            <li>
+                <span class="member-name">{{ item.content }}</span>
+                <span class="member-role">{{ item.date }}</span>                
+            </li>
+        } @empty {
+            <li>No members found.</li>
+        }
+      </ul>
+    </div>
+</div>
+
+<!-- Bouton EDIT -->
+<div class="association-card">
+    <button class="edit-btn" (click)="toEdit()">EDIT</button>
+</div>

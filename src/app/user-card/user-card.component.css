@@ -1,6 +1,35 @@
-li{
+li {
     width: 225px;
-    height: 300px;
+    height: auto;
     background-color: green;
-    border: 10px;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+  

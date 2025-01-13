@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+
+<div class="container">
+    <h1>Edit Association</h1>
+</div>
+<div class="container">
+
+    <form (ngSubmit)="saveName()" class="form-section">
+        <div class="form-group">
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" [(ngModel)]="association.name" name="lastname" required />
+        </div>
+        <button type="submit" class="save-btn">Enregistrer</button>
+    </form>
+</div>
+<div class="container">
+    <div class="form-section">
+        <h2>Roles</h2>
+        <ul id="roles-list" class="roles-list">
+            @for (item of allroles; track item) {
+                <li class="role-item">
+                    <span>{{ item.user_id }}</span>
+                    <span>{{ item.firstname }}</span>
+                    <span>{{ item.lastname }}</span>
+                    <span>{{ item.role }}</span>
+                    <button (click)="deleteRole(item.user_id,item.association_id)" class="delete-btn">×</button>
+                </li>
+            } @empty {
+                <li class="empty-message">No members found.</li>
+            }
+        </ul>
+    </div>
+</div>
+<div class="container">
+
+    <form (ngSubmit)="addRole()" class="form-section">
+        <h2>Add Role</h2>
+        <div class="form-group">
+            <label for="new-role">Role Name</label>
+            <input type="text" id="new-role" [(ngModel)]="role_name" name="role" required placeholder="Enter new role" />
+        </div>
+        <div class="form-group">
+            <label for="age">User ID</label>
+            <input type="number" id="age" [(ngModel)]="user_id" name="age" required />
+        </div>
+        <button type="submit" class="add-btn">Add Role</button>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+<div class="a">
+    <h2>Informations utilisateur</h2>
+    <div>
+        <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" id="id" [(ngModel)]="user.id" name="id" disabled />
+        </div>
+
+        <div class="form-group">
+        <label for="firstname">Prénom</label>
+        <input type="text" id="firstname" [(ngModel)]="user.firstname" name="firstname" disabled />
+        </div>
+
+        <div class="form-group">
+        <label for="lastname">Nom</label>
+        <input type="text" id="lastname" [(ngModel)]="user.lastname" name="lastname" disabled />
+        </div>
+
+        <div class="form-group">
+        <label for="age">Âge</label>
+        <input type="number" id="age" [(ngModel)]="user.age" name="age" disabled />
+        </div>
+
+    </div>
+</div>
+<div class="a">
+    <ul>
+        @for (item of roles; track item) {
+            <li>Association: {{item.name}}, Role: {{item.role}}</li>
+            } @empty {
+            <li>There are no items.</li>
+        }   
+    </ul>
+
+
+</div>
+
+  

@@ -1,0 +1,15 @@
+<app-nav></app-nav>
+<div class="a">
+  <h2>Creer une association</h2>
+  <form (ngSubmit)="saveChanges()">
+
+    <div class="form-group">
+      <label for="lastname">Nom</label>
+      <input type="text" id="lastname" [(ngModel)]="name" name="lastname" required />
+    </div>
+
+    <button type="submit" [disabled]="!name">Enregistrer</button>
+  </form>
+</div>
+
+  

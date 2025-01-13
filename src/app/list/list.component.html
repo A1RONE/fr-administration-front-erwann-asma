@@ -1,8 +1,19 @@
 <app-nav></app-nav>
 <ul>
-@for (item of userlist; track item.id) {
-    <app-user-card [myData] = item.id></app-user-card>
-    } @empty {
-    <li>There are no items.</li>
+@if(routeUrl === 'associations'){
+    @for (item of association_dataSource; track item) {
+        <app-association-card [myData] = item></app-association-card>
+        } @empty {
+        <li>There are no items.</li>
+    }
 }
+
+@if(routeUrl === 'users'){
+    @for (item of user_dataSource; track item) {
+        <app-user-card [myData] = item></app-user-card>
+        } @empty {
+        <li>There are no items.</li>
+    }   
+}
+
 </ul>

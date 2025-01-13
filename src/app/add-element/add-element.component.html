@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<div class="selection-page">
+  <h2>Que voulez-vous ajouter ?</h2>
+
+  <div class="selection-form">
+    <form (ngSubmit)="navigateToSelection()">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select id="type" [(ngModel)]="selectedType" name="type" required>
+          <option value="association">Association</option>
+          <option value="user">User</option>
+        </select>
+      </div>
+
+      <button type="submit">Valider</button>
+    </form>
+  </div>
+</div>

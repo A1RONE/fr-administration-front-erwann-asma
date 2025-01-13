@@ -1,0 +1,11 @@
+
+<li>
+    <p><strong>Name:</strong> {{myData.name}}</p>
+    <ul>
+        @for (item of myData.members; track item) {
+            <li class="name" >{{item.firstname}} {{item.lastname}}</li>
+        }
+    </ul>
+    <a [routerLink]="['/associations/', myData.id]">View</a>
+    <button (click)="delete(myData.id)" class="delete-btn">[x]</button>
+</li>

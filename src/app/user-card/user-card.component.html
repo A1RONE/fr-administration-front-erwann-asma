@@ -1,3 +1,9 @@
 <li>
-<p>{{myData}}</p>
+    <p><strong>ID:</strong> {{myData.id}}</p>
+    <p><strong>First Name:</strong> {{myData.firstname}}</p>
+    <p><strong>Last Name:</strong> {{myData.lastname}}</p>
+    <p><strong>Age:</strong> {{myData.age}}</p>
+    <a [routerLink]="['/users/', myData.id]">View</a>
+    <button (click)="delete(myData.id)" class="delete-btn">[x]</button>
 </li>
+  

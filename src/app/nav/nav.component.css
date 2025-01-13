@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     display: flex; /* Affiche les éléments de la liste sur une seule ligne */
+    align-items: center; /* Assure l'alignement vertical des éléments */
 }
 
 /* Style each list item */
@@ -45,9 +46,33 @@
 
 /* Style the logout button container */
 .topnav .logout {
-    margin-right: 16px; /* Ajoute un espacement à droite du bouton */
+    display: flex; /* Flex container */
+    align-items: center; /* Assure l'alignement vertical */
+    margin-left: auto; /* Éloigne la section logout à droite */
 }
 
+.topnav .logout ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical des éléments */
+}
+
+.topnav .logout li {
+    margin: 0;
+    padding: 0;
+}
+
+.topnav .logout a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Style the logout button */
 .topnav .logout button {
     background-color: #333;
     color: #f2f2f2;
@@ -55,6 +80,7 @@
     padding: 10px 16px;
     cursor: pointer;
     font-size: 17px;
+    margin-left: 16px; /* Espacement entre le bouton et les liens */
 }
 
 .topnav .logout button:hover {

@@ -1,0 +1,123 @@
+/* Style général pour la carte de l'association */
+.association-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.association-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* En-tête de la carte (Nom de l'association) */
+.association-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.association-header h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Section des membres */
+.association-members {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+}
+
+.association-members h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Liste des membres */
+.association-members ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.association-members li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+    font-size: 16px;
+}
+
+.association-members li:last-child {
+    border-bottom: none;
+}
+
+/* Style du nom et du rôle des membres */
+.member-name {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.member-role {
+    font-style: italic;
+    color: #777;
+}
+
+/* Style lorsque la liste est vide */
+.association-members li {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+}
+
+/* Responsivité : cartes plus petites sur mobile */
+@media (max-width: 768px) {
+    .association-card {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+
+    .association-header h2 {
+        font-size: 22px;
+    }
+
+    .association-members h3 {
+        font-size: 20px;
+    }
+
+    .association-members li {
+        font-size: 14px;
+    }
+}
+
+/* Style du bouton "EDIT" */
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn:focus {
+    outline: none;
+}
+

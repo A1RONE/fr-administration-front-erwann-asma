@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { Observable, lastValueFrom  } from 'rxjs';
@@ -16,33 +16,15 @@ export class UsersListComponent implements OnInit {
     private http: HttpClient
   ) {}
   ngOnInit(): void {
-    const request: Observable<any> = this.http.get('http://localhost:3000/users', { observe: 'response' });
-    lastValueFrom(request).then(response => this.dataSource = response.body);
+    const request: Observable<any> = this.http.get('http://localhost:3000/users', {
+      observe: 'response',
+    });
+    lastValueFrom(request).then(response => this.dataSource = response.body );
   }
 
   displayedColumns: string[] = ['id', 'lastname', 'firstname', 'age'];
   dataSource = [];
 }
 
-export class User{
-  public id: number;
 
-  public lastname: string;
-
-  public firstname: string;
-
-  public age: number;
-
-  constructor(
-      id: number,
-      lastname: string,
-      firstname: string,
-      age: number
-  ) {
-      this.id = id;
-      this.firstname = firstname;
-      this.lastname = lastname;
-      this.age = age;
-  }
-}
 

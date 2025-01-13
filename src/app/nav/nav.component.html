@@ -1,11 +1,15 @@
 <nav class="topnav">
     <ul class="links">
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">User</a></li>
-        <li><a href="#contact">Association</a></li>
-        <li><a href="#about">Search</a></li>
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/lists/users']">User</a></li>
+        <li><a [routerLink]="['/lists/associations']">Association</a></li>
+        <li><a [routerLink]="['/select']">Search</a></li>
+        <li><a [routerLink]="['/add']">Add</a></li>
     </ul>
     <div class="logout">
+        <ul class="links">
+            <li><a [routerLink]="['/profile']">Profile</a></li>
+        </ul>
         <button (click)="logout()">Logout</button>
     </div>
 </nav>
